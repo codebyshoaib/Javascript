@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+
+    <ul class="languages">
+        <li>Javascript</li>
+        <li>Golang</li>
+        <li>C++</li>
+    </ul>
+    
+</body>
+<script>
+
+    //add
+    // function addLanguage(lang){
+    //     let newelement=document.createElement('li');
+    //    // newelement.innerHTML=`${lang}`;
+    //     newelement.appendChild(document.createTextNode(lang))
+    //     document.querySelector('.languages').appendChild(newelement); //add at last..traverse all 
+
+    // } 
+
+    //edit
+    let prev=document.querySelector('li:nth-child(2)');
+    let next=document.createElement('li');
+    next.innerText="Mojo";
+    prev.replaceWith(next);
+
+    //remove
+    let last=document.querySelector('li:last-child');
+    last.remove();
+    
+</script>
+</html>
