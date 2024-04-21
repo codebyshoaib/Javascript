@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Shoaib ud Din</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // //set Time out
+    // const changeText= setTimeout(function(){
+    //     document.querySelector('h1').innerHTML='The Courageous'
+    // },2000);
+
+    // document.querySelector('#stop').addEventListener('click',(e)=>{
+    //     clearTimeout(changeText); //event honey sy rok dena
+    //     console.log("Stop")
+    // })
+    const sayDate = function (str) {
+      console.log(str, Date.now());
+    };
+    let intervalID;
+    document.querySelector('#start').addEventListener("click",()=>{
+        console.log("Starting from here");
+        intervalID = setInterval(sayDate, 1000, "hi"); //Har aik second bad ye kam hta rhega!!;
+        
+    })
+    // setInterval(sayDate,1000,"hi") //Har aik second bad ye kam hta rhega!!
+    // const intervalID = setInterval(sayDate, 1000, "hi"); //Har aik second bad ye kam hta rhega!!;
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(intervalID);
+      console.log("Stopping  here");
+    });
+  
+  </script>
+</html>
